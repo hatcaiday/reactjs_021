@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // const name = "Nhung";
+      // const element = <h1>Hello, {name}</h1>;
+
+      // ReactDOM.render(
+      //   element,
+      //   document.getElementById("root")
+      // )
+
+      function fullName(user) {
+        return(
+          user.firstName + ' ' + user.lastName
+        )
+      }
+
+      const user = {
+        firstName: 'Nhung',
+        lastName: 'Do'
+      };
+
+      // function welcome(user) {
+      //   if (user) {
+      //     return <h1>Hello, {fullName(user)}</h1>;
+      //   } else {
+      //     return <h1> Nobody here!!! </h1>;
+      //   }
+      // }
+
+      // // const element = <div className={user.firstName}>{welcome(user)}</div>;
+      // const element = React.createElement(
+      //   'h1',
+      //   // {className: {user.firstName}},
+      //   {welcome(user)}
+      // );
+
+      // ReactDOM.render(
+      //   element,
+      //   document.getElementById("root")
+      // )
+
+      // 3. Rendering Element
+      // function tick() {
+      //   const element = (
+      //     <h1>
+      //       <p> Hello, {fullName(user)}</p>
+      //       <h3> Now, {new Date().toLocaleTimeString()}</h3>
+      //     </h1>
+      //   );
+
+      //   ReactDOM.render(
+      //     element,
+      //     document.getElementById("root")
+      //   );
+      // }
+
+      // setInterval(tick(), 1000);
+
+
+      // 4. React component
+      // class ReactDemo extends React.Component {
+      //   render() {
+      //     return (
+      //       <h1> Hello, Nhung </h1>
+      //     )
+      //   }
+      // }
+
+      function ReactDemo() {
+        return <h1> Hello, Nhung </h1>
+      }
+
+      element = <div><ReactDemo/></div>;
+
+      ReactDOM.render(
+        element,
+        document.getElementById("root")
+      )
+    </script>
+  </body>
+</html>

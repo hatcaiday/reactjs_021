@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Comment(props) {
+        return (
+          <div>
+            <div> {props.date} </div>
+            <div> {props.user.name} </div>
+            <div> {props.user.message} </div>
+          </div>
+        )
+      }
+
+      const user_comment = {
+        date: new Date().toLocaleTimeString(),
+        user: {
+          name: "Nhung",
+          message: "Write anything."
+        }
+      }
+
+      ReactDOM.render(
+        <Comment date={user_comment.date} user={user_comment.user} />,
+        document.getElementById("root")
+      )
+    </script>
+  </body>
+</html>
