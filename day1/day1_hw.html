@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      td {
+        height: 500px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      class Header extends React.Component {
+        render() {
+          return (
+            <tr>
+              <th> Header </th>
+            </tr>
+          )
+        }
+      }
+
+      class Body extends React.Component {
+        render() {
+          return (
+            <tr>
+              <td> Body </td>
+            </tr>
+          )
+        }
+      }
+
+      const element = (
+        <div className="container">
+          <table className="border">
+            <Header />
+            <Body />
+          </table>
+        </div>
+      );
+
+      ReactDOM.render(
+        element,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>

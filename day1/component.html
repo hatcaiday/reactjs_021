@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Welcome(props) {
+        return (
+          props.name
+        )
+      }
+
+      function App() {
+        return (
+          <div>
+            <h1> Hello, {<Welcome name="Nhung" />} </h1>
+            <h1> Hello, {<Welcome name="Nhung1" />} </h1>
+            <h1> Hello, {<Welcome name="Nhung2" />} </h1>
+          </div>
+        )
+      }
+
+      ReactDOM.render(
+        <App />,
+        document.getElementById("root")
+      )
+    </script>
+  </body>
+</html>
